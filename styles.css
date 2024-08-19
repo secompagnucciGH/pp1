@@ -1,0 +1,105 @@
+/* styles.css */
+
+/* Estilo general y reset de márgenes y padding */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Configuración de visualización global */
+html {
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    margin-top: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+/* Estilo del header */
+header {
+    margin: 0;
+    background-color: #7f0000;
+    color: white;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Estilo de navegación */
+header nav ul {
+    background-color: rgba(255, 129, 129, 0.807);
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 15px;
+    transition: background-color 0.3s, border-radius 0.3s, box-shadow 0.3s, padding 0.5s;
+}
+
+header nav ul li a {
+    display: inline;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+/* Estilo de hover para los enlaces de navegación */
+header nav ul li:hover {
+    background-color: #949494ca;
+    border-radius: 5px;
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.4);
+    padding: 2px 15px;
+    transition-duration: 0.7s;
+}
+
+/* Estilo del contenido principal */
+main {
+    text-align: center;
+}
+
+/* Estilo de la imagen principal */
+.imgMain {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    filter: blur(4px);
+    transition: filter 3s ease;
+    transform: scale(1.2);
+}
+
+.imgMain:hover {
+    filter: blur(2px);
+}
+
+/* Estilo del footer */
+footer {
+    background-color: #200000;
+    color: white;
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+}
+
+/* Estilo para el enlace activo */
+header nav ul li.active a {
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+}
+
+header nav ul li.active a:hover {
+    font-weight: 900;
+}
