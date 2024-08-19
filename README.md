@@ -1,4 +1,3 @@
-# pp1
 Practica Profesionalizante 1
 
 Gestionar pedidos de manera eficiente. La interfaz está estructurada de forma intuitiva para que los usuarios puedan navegar entre diferentes secciones como "Inicio", "Gestionar mis pedidos" y "Soporte" con su respectiva funcionalidad.

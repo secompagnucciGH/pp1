@@ -1,24 +1,34 @@
 // script.js
 
-// Evento que se ejecuta cuando el contenido del DOM ha sido completamente cargado
 document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('nav a');
     const inicioSection = document.getElementById('inicio');
-
-    // Manejo de visibilidad de secciones
+    const gestionarPedidosSection = document.getElementById('gestionarPedidos');
+    const soporteSection = document.getElementById('soporte');
+  
+    // Manejo de visibilidad
     links.forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-            if (link.getAttribute('href') === '#gestionarPedidos') {
-                inicioSection.style.display = 'none';
-            } else if (link.getAttribute('href') === '#inicio') {
-                inicioSection.style.display = 'block';
-            }
-        });
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
+        
+        if (link.getAttribute('href') === '#gestionarPedidos') {
+          inicioSection.style.display = 'none';
+          soporteSection.style.display = 'none';
+          gestionarPedidosSection.style.display = 'block';
+        } else if (link.getAttribute('href') === '#inicio') {
+          gestionarPedidosSection.style.display = 'none';
+          soporteSection.style.display = 'none';
+          inicioSection.style.display = 'block';
+        } else if (link.getAttribute('href') === '#soporte') {
+          inicioSection.style.display = 'none';
+          gestionarPedidosSection.style.display = 'none';
+          soporteSection.style.display = 'block';
+        }
+      });
     });
-});
+  });
 
-// Activación de botones de navegación
+// Manejo de la active class para botones
 document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('nav a');
     links.forEach(link => {
