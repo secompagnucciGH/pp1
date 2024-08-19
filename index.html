@@ -8,8 +8,8 @@
     <script src="script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <!-- Header principal con navegación -->
     <header id="head-sup" class="head-sup">
         <h1>Sistema de Gestión de Pedidos</h1>
         <nav class="nav-sup">
@@ -21,17 +21,102 @@
         </nav>
     </header>
 
-
     <main>
         <!-- Sección INICIO-->
         <section id="inicio">
-            <img src="img\mainImage.jpg" alt="Imagen de ejemplo" class="imgMain">
+            <img src="img\mainImage.jpg" alt="Imagen de fondo" class="imgMain">
+            <div class="welcome-text">
+            <h1>Bienvenido a nuestro sistema de gestión de pedidos</h1>
+            <p>Encuentra tus menús favoritos y gestiona tus pedidos de manera fácil y rápida.</p>
+            </div>
+  
+            <div class="news-promotions">
+            <h2>Noticias y promociones</h2>
+            <ul>
+                <li>¡Nuevo menú italiano disponible!</li>
+                <li>Descubre nuestras ofertas especiales del mes</li>
+            </ul>
+            </div>
         </section>
         
-        <!-- Sección PEDIDOS-->
+       <!-- Sección PEDIDOS-->
         <section id="gestionarPedidos">
             <h2>MIS PEDIDOS</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+            <!-- Selección de Semana -->
+            <div class="semana-select">
+            <label for="semana-select">Seleccione la semana:</label>
+            <select id="semana-select">
+                <option value="1">Semana 1</option>
+                <option value="2">Semana 2</option>
+                <option value="3">Semana 3</option>
+                <option value="4">Semana 4</option>
+            </select>
+            </div>
+            
+            <!-- Tabla de Pedidos -->
+            <div class="pedido-table">
+            <table>
+                <tr>
+                <th>Día</th>
+                <th>Menú</th>
+                </tr>
+                <tr>
+                <td>Lunes</td>
+                <td>
+                    <select id="lunes-select">
+                    <option value="pollo">Pollo</option>
+                    <option value="ensalada">Ensalada</option>
+                    <option value="sopa">Sopa</option>
+                    </select>
+                </td>
+                </tr>
+                <tr>
+                <td>Martes</td>
+                <td>
+                    <select id="martes-select">
+                    <option value="carnealhorno">Carne al horno</option>
+                    <option value="pescado">Pescado</option>
+                    <option value="vegetariano">Vegetariano</option>
+                    </select>
+                </td>
+                </tr>
+                <tr>
+                <td>Miércoles</td>
+                <td>
+                    <select id="miercoles-select">
+                    <option value="carne">Carne</option>
+                    <option value="polloconensalada">Pollo con Ensalada</option>
+                    <option value="sándwich">Sándwich</option>
+                    </select>
+                </td>
+                </tr>
+                <tr>
+                <td>Jueves</td>
+                <td>
+                    <select id="jueves-select">
+                    <option value="menuitaliano">Menú Italiano</option>
+                    <option value="menuespañol">Menú Español</option>
+                    <option value="menuvegano">Menú Vegano</option>
+                    </select>
+                </td>
+                </tr>
+                <tr>
+                <td>Viernes</td>
+                <td>
+                    <select id="viernes-select">
+                    <option value="pescadoconensalada">Pescado con Ensalada</option>
+                    <option value="carneconpapas">Carne con Papas</option>
+                    <option value="ensaladagrande">Ensalada Grande</option>
+                    </select>
+                </td>
+                </tr>
+            </table>
+            </div>
+            
+            <!-- Lista de Pedidos -->
+            <ul id="lista-pedidos">
+            <!--pedidos agregados-->
+            </ul>
         </section>
 
         <!-- Sección SOPORTE-->
@@ -41,7 +126,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <p>© 2do DSW P-P-1 G-7 2024</p>
     </footer>
